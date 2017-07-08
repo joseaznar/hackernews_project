@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %} Hacker News {% endblock %}
+
+{% block content %}
+	<ol type="1">
+	{% for noticia in noticias %}
+		<li><a href='{{noticia.link}}'><span class="black-text">{{noticia.title}}</span></a></li>
+	{% endfor %}
+	</ol>
+{% endblock %}
